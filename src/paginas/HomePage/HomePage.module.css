@@ -1,0 +1,17 @@
+.cabecalho {
+    width: 400px;
+    margin-top: 12px;
+}
+
+.container {
+    width: 400px;
+}
+
+.cadastro h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.lista {
+    width: 400px;
+}

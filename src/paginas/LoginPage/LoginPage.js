@@ -1,8 +1,13 @@
-import style from "./LoginPage.module.css";
+import styles from "./LoginPage.module.css";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Button, Input } from "antd";
+
 
 export const LoginPage = ({ usuarioLogado, setUsuarioLogado }) => {
+
+  const [usuarioLocal, setUsuarioLocal] = useState({});
+
   const navigate = useNavigate();
   useEffect(() => {
     if (usuarioLogado && usuarioLogado.nome) {
@@ -10,21 +15,23 @@ export const LoginPage = ({ usuarioLogado, setUsuarioLogado }) => {
     }
   });
 
-  const Login = () => {
-    setUsuarioLogado({ id: 1, nome: "Pimentel" });
+  const Login = () => {    
+    if (usuarioLocal && usuarioLocal.nome) {
+      setUsuarioLogado(usuarioLocal);
+    }
   };
 
   return (
-    <div>
-      <h3>Login page</h3>
-      <button
+    <div className={styles.container}>
+      <h3 style={{display: 'inline-block'}}>Login page</h3>
+      <Input onChange={(e)=>{setUsuarioLocal({nome : e.target.value})}} />
+      <Button type="primary"      
         onClick={() => {
           Login();
         }}
       >
-        {" "}
         Login
-      </button>
+      </Button>
     </div>
   );
 };

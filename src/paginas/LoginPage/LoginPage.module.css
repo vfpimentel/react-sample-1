@@ -1,0 +1,19 @@
+.container {
+    background-color: aliceblue;
+    width: 300px;
+    border-radius: 10px 10px;
+}
+
+.container h3 {
+    background-color: beige;
+    padding-left: 5px;
+}
+
+.container Input {
+    margin-left: 10px;
+    width: 90%;
+}
+
+.container Button {
+    margin: 10px 10px;
+}

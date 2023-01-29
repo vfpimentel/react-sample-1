@@ -1,0 +1,7 @@
+.formulario {
+    margin: 0px 5px;
+}
+
+.campos:read-only {
+    background-color: lightgray;
+}
